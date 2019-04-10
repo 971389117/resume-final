@@ -12,7 +12,7 @@
         commentsText.className='comments-text'
         li.classList.add('comments-li')
 
-        img.src='avatar.jpg'
+        img.src='./images/avatar.jpg'
 
         nickName.innerText=item.name
         commentsText.innerHTML=item.content
