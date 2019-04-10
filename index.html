@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/normalize.css">
+
+    <link rel="stylesheet" href="css/style.css">
+    <!-- 引入样式 -->
+    <link rel="stylesheet"
+        href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+
+    <!-- import CSS -->
+    <style type="text/css">
+        .icon {
+            width: 1.3em;
+            height: 1.3em;
+            vertical-align: -0.15em;
+            fill: currentColor;
+            overflow: hidden;
+        }
+    </style>
+
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!--
+          npm init -y
+          parcel index.html
+    -->
+    <!-- active -->
+    <div class="loading active  "></div>
+    <div id='wrapper' class="wrapper">
+        <header id="header" class="header">
+            <div class="jiasai"></div>
+            <div class="top-nav-bar ">
+                <div class="inner-top-bar">
+                    <div class="logo">
+                        <span class="logo-left">RS</span>
+                        <span class="logo-right">card</span>
+                    </div>
+                    <nav class="nav">
+                        <ul>
+                            <li><a href="#">ABOUT</a></li>
+                            <li><a href="#">SKILLS</a></li>
+                            <li><a href="#">PROJECT</a></li>
+                            <li><a href="#">COMMENTS</a></li>
+                            <li><a href="#">OTHER</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="banner"></div>
+        </header>
+
+        <div id="app" class="more">
+
+        </div>
+        <div id="container" class="container">
+            <section id='main' class="main">
+                <div class="main-card">
+                    <div class="profile">
+                        <div class="row">
+                            <div class="col1">
+                                <img src="./images/avatar.jpg" alt="头像">
+                            </div>
+                            <div class="col2">
+                                <div class="profile-info">
+                                    <div class="hello">面试官，你好</div>
+                                    <h1 class="profile-title">我是 郑昕</h1>
+                                    <h2 class="profile-position">一名前端开发工程师</h2>
+                                </div>
+                                <ul class="profile-list">
+                                    <li><strong class="title">AGE</strong><span
+                                            class="cont">28</span></li>
+                                    <li><strong
+                                            class="title">ADDRESS</strong><span
+                                            class="cont">地址是哪里啊</span></li>
+                                    <li><strong
+                                            class="title">E-MAIL</strong><span
+                                            class="cont">qq971389117@gmail.com</span>
+                                    </li>
+                                    <li><strong
+                                            class="title">PHONE</strong><span
+                                            class="cont">18500208602</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile-social">
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-weixin"></use>
+                        </svg>
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-weibo"></use>
+                        </svg>
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-zhihu"></use>
+                        </svg>
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-douban"></use>
+                        </svg>
+                    </div>
+                </div>
+            </section>
+            <section id='radar' class="radar">
+                <h2>任性的技能示意图</h2>
+                <canvas id="myChart" width="400" height="200"></canvas>
+
+            </section>
+
+
+            <section id='projects' class="projects">
+                <div class="head">
+                    <h2>作品展示区</h2>
+
+                    <div id="project-app" class="more">
+                        <a @click="visible = true">更多</a>
+                        <el-dialog :visible.sync="visible" title="Hello world">
+                            <div class="project">
+                                <a target="_black" class="project-preview"
+                                    href="https://971389117.github.io/make_pikachu/">预览</a>
+                                <a target="_black" class="project-code"
+                                    href="https://github.com/971389117/make_pikachu">代码</a>
+                                <img src="images/pikachu.jpeg" alt="">
+                                <p>用代码自动生成 - 皮卡丘</p>
+                            </div>
+                            <div class="project">
+                                <a target="_black" class="project-preview"
+                                    href="https://971389117.github.io/make_pikachu/">预览</a>
+                                <a target="_black" class="project-code"
+                                    href="https://github.com/971389117/make_pikachu">代码</a>
+                                <img src="images/pikachu.jpeg" alt="">
+                                <p>用代码自动生成 - 皮卡丘</p>
+                            </div>
+                            <div class="project">
+                                <a target="_black" class="project-preview"
+                                    href="https://971389117.github.io/make_pikachu/">预览</a>
+                                <a target="_black" class="project-code"
+                                    href="https://github.com/971389117/make_pikachu">代码</a>
+                                <img src="images/pikachu.jpeg" alt="">
+                                <p>用代码自动生成 - 皮卡丘</p>
+                            </div>
+                            <div class="project">
+                                <a target="_black" class="project-preview"
+                                    href="https://971389117.github.io/make_pikachu/">预览</a>
+                                <a target="_black" class="project-code"
+                                    href="https://github.com/971389117/make_pikachu">代码</a>
+                                <img src="images/pikachu.jpeg" alt="">
+                                <p>用代码自动生成 - 皮卡丘</p>
+                            </div>
+                            <div class="project">
+                                <a target="_black" class="project-preview"
+                                    href="https://971389117.github.io/make_pikachu/">预览</a>
+                                <a target="_black" class="project-code"
+                                    href="https://github.com/971389117/make_pikachu">代码</a>
+                                <img src="images/pikachu.jpeg" alt="">
+                                <p>用代码自动生成 - 皮卡丘</p>
+                            </div>
+
+                        </el-dialog>
+                    </div>
+                </div>
+
+                <div class="projects-demo">
+                    <div class="project">
+                        <a target="_black" class="project-preview"
+                            href="https://971389117.github.io/make_pikachu/">预览</a>
+                        <a target="_black" class="project-code"
+                            href="https://github.com/971389117/make_pikachu">代码</a>
+                        <img src="images/pikachu.jpeg" alt="">
+                        <p>用代码自动生成 - 皮卡丘</p>
+                    </div>
+                    <div class="project">
+                        <a target="_black" class="project-preview"
+                            href="http://971389117.github.io/keyboard-navigation">预览</a>
+                        <a target="_black" class="project-code"
+                            href="https://github.com/971389117/keyboard-navigation">代码</a>
+                        <img src="images/keyboard-navigation.jpeg" alt="">
+                        <p>键盘导航</p>
+
+                    </div>
+                    <!-- <div class="project">
+                    <img src="images/resume-jump.jpeg" alt="">
+                </div> -->
+                    <div class="project">
+                        <a target="_black" class="project-preview"
+                            href="https://971389117.github.io/drawing-board">预览</a>
+                        <a target="_black" class="project-code"
+                            href="https://github.com/971389117/drawing-board">代码</a>
+                        <img src="images/draw.jpeg" alt="">
+                        <p>canvas画板</p>
+
+                    </div>
+                </div>
+            </section>
+            <section id='blog' class='blog'>
+                <div class="head">
+                    <h2>博客</h2>
+                    <span class="more">
+                        <a href="">更多</a>
+                    </span>
+                </div>
+
+                <div class="blog-inner">
+                    <div class="blog-card">
+                        <a target="_black"
+                            href="https://971389117.github.io/2019/03/10/%E5%8E%9F%E5%9E%8B%E4%B8%8E%E5%8E%9F%E5%9E%8B%E9%93%BE-prototype%E5%92%8C-proto/">
+                            <div class="top">
+                                <img src="images/blog-prototype.jpg" alt="">
+                            </div>
+                            <div class="bottom">
+                                <div class="blog-data">
+                                    <div class="blog-tag">
+                                        <span>#原型 </span>
+                                        <span>#原型链 </span>
+                                        <span>#prototype </span>
+                                    </div>
+                                    <h3>原型与原型链,prototype和__proto__</h3>
+                                    <div class="blog-info">
+                                        <svg class="icon" aria-hidden="true">
+                                            <use xlink:href="#icon-iconfont">
+                                            </use>
+                                        </svg>
+                                        <span>郑星星</span>
+                                        <svg class="icon" aria-hidden="true">
+                                            <use xlink:href="#icon-comment">
+                                            </use>
+                                        </svg>
+                                        <span>0</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="blog-card">
+                        <a  target="_black"
+                            href="https://971389117.github.io/2018/10/22/HTTP%E7%AE%80%E8%BF%B0/">
+                            <div class="top">
+                                <img src="images/blog-http.jpg" alt="">
+                            </div>
+                            <div class="bottom">
+                                <div class="blog-data">
+                                    <div class="blog-tag">
+                                        <span>#HTTP </span>
+                                        <span>#状态码 </span>
+                                        <span>#三次握手 </span>
+                                    </div>
+                                    <h3>HTTP简述</h3>
+                                    <div class="blog-info">
+                                        <svg class="icon" aria-hidden="true">
+                                            <use xlink:href="#icon-iconfont">
+                                            </use>
+                                        </svg>
+                                        <span>郑星星</span>
+                                        <svg class="icon" aria-hidden="true">
+                                            <use xlink:href="#icon-comment">
+                                            </use>
+                                        </svg>
+                                        <span>0</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <section id='comments' class="comments">
+                <div class="head">
+                    <h1>留言</h1>
+                    <div class="more">
+                        <a href="">更多</a>
+                    </div>
+                </div>
+                <ol id='messageList'></ol>
+                <form id='postMessageForm'
+                    style='width: 700px;margin: 50px auto;'>
+
+                    <div id="div3">
+                        <p>
+                            欢迎，有什么想说的都可以说。
+                        </p>
+
+                    </div>
+                    <label>姓名：<input id=name required type="text"
+                            name='name'></label>
+                    <!--
+                    <label>内容：<input type="text" required
+                            name='content'></label> -->
+                    <input class="submit" type="submit" value="提交">
+                </form>
+            </section>
+            <section id='contact' class="contact">
+                <h2>联系</h2>
+                <div class="contact-inner">
+                    <div class="left"></div>
+                    <div class="right">
+                        <div id="map-base"></div>
+                    </div>
+                </div>
+            </section>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+        </div>
+    </div>
+    <script src="js/loading.js"></script>
+    <script src="//at.alicdn.com/t/font_1100450_bjb7ks2zq0n.js"></script>
+    <!-- import Vue before Element -->
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <!-- import JavaScript -->
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+    <script>
+        new Vue({
+            el: '#project-app',
+            data: function () {
+                return {
+                    visible: false
+                }
+            }
+        })
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.js"
+        integrity="sha256-Uv9BNBucvCPipKQ2NS9wYpJmi8DTOEfTA/nH2aoJALw="
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script
+        src="//cdn.jsdelivr.net/npm/leancloud-storage@3.12.0/dist/av-min.js">
+    </script>
+    <script src="//unpkg.com/wangeditor/release/wangEditor.min.js"></script>
+    <script src='js/message.js'></script>
+    <script src="js/skills.js"></script>
+    <script type="text/javascript"
+        src="http://api.map.baidu.com/api?v=3.0&ak=qi45ph6CqEuuqg42N3u5mZwebpvQCtWG">
+    </script>
+    <script src="js/main.js"></script>
+    <script>
+        console.log(']===')
+        var map = new BMap.Map("map-base");
+        var point = new BMap.Point(116.404, 39.915);
+        map.centerAndZoom(point, 15);
+        map.addControl(new BMap.NavigationControl());
+        map.addControl(new BMap.ScaleControl());
+        map.addControl(new BMap.OverviewMapControl());
+        map.addControl(new BMap.MapTypeControl());
+        map.enableScrollWheelZoom(true);
+        map.setCurrentCity("北京"); // 仅当设置城市信息时，MapTypeControl的切换功能才能可用
+
+        var E = window.wangEditor
+        var editor = new E('#div3')
+        editor.customConfig.menus = [
+            'undo', // 撤销
+            'redo', // 重复
+            'code', // 插入代码
+            'foreColor', // 文字颜色
+            'emoticon', // 表情
+            'link', // 插入链接
+            'list', // 列表
+            'justify', // 对齐方式
+            'quote', // 引用
+            'bold',
+            'italic',
+            'underline',
+        ]
+        // 自定义配置颜色（字体颜色、背景色）
+        editor.customConfig.colors = [
+            '#000000',
+            '#eeece0',
+            '#1c487f',
+            '#4d80bf',
+            '#c24f4a',
+            '#8baa4a',
+            '#7b5ba1',
+            '#46acc8',
+            '#f9963b',
+            '#ffffff'
+        ]
+        editor.customConfig.fontNames = [
+            '宋体',
+            '微软雅黑',
+            'Arial',
+            'Tahoma',
+            'Verdana'
+        ]
+        editor.create()
+        let submit = document.querySelector('.submit')
+        submit.addEventListener('click', e => {
+            console.log()
+        })
+    </script>
+
+</body>
+
+</html>
